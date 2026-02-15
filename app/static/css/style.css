@@ -1,0 +1,171 @@
+/* ==========================================================
+   🔥 RESET GENERAL
+========================================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;  /* Hace que padding y border no aumenten el tamaño real */
+}
+
+/* ==========================================================
+   🔥 ESTILOS GENERALES
+========================================================== */
+body {
+    font-family: 'Segoe UI', sans-serif;/* Fuente moderna y legible */
+    background:black;/* Fondo oscuro para resaltar el contenido */
+    color: white;/* Texto blanco para buen contraste */
+    line-height: 1.6;/* Mejor legibilidad */
+}
+
+/* ==========================================================
+   🔥 ESTILOS DE ENCABEZADOS
+========================================================== */
+header {
+    position: fixed; /* Fija el encabezado en la parte superior */
+    top: 0;/* Asegura que el encabezado esté en la parte superior */
+    width: 100%;/* Ocupa todo el ancho de la pantalla */
+    padding: 20px 40px;/* Padding para dar espacio al contenido del encabezado */
+    display: flex;/* Usa flexbox para alinear los elementos del encabezado */
+    justify-content: space-between;/* Espacio entre los elementos del encabezado */ 
+    align-items: center;/* Centra verticalmente los elementos del encabezado */
+    background: rgba(0, 0, 0, 0.6);/* Fondo semitransparente para que el contenido debajo sea visible */
+    z-index: 1000;/* Asegura que el encabezado esté por encima de otros elementos */
+}
+
+/* ==========================================================
+   🔥 ESTILOS DEL LOGO
+========================================================== */
+.logo {
+    color: red;/* Color rojo para el logo */
+    text-shadow: 0 0 10px red;/* Sombra roja para resaltar el logo */
+}
+
+/* ==========================================================
+   🔥 LISTA DEL MENU
+========================================================== */
+nav-links {
+    list-style: none;
+    display: flex;/* Usa flexbox para alinear los enlaces del menú */
+    gap: 20px;/* Espacio entre los enlaces del menú */
+}
+
+/* ==========================================================
+   🔥 ESTILOS DE LOS ENLACES DEL MENU   
+========================================================== */
+nav-links a{
+    text-decoration: none;/* Elimina el subrayado de los enlaces */
+    color: white;/* Color blanco para los enlaces del menú */
+    transition: 0.3s;/* Transición suave para el cambio de color */
+}
+
+/* ==========================================================
+   🔥 EFECTO CUANDO PASAMOS EL RATON
+========================================================== */
+nav-links a:hover {
+    color: red;/* Cambia el color a rojo al pasar el ratón */
+    text-shadow: 0 0 10px red;/* Agrega una sombra roja al pasar el ratón */
+}
+
+/* ==========================================================
+   🔥 HERO PRINCIPAL
+========================================================== */
+.hero {
+    height: 100vh;/* Ocupa toda la altura de la pantalla */
+    display: flex;/* Usa flexbox para centrar el contenido */
+    flex-direction: column;/* Alinea el contenido en columna */
+    justify-content: center;/* Centra verticalmente el contenido */
+    align-items: center;/* Centra horizontalmente el contenido */
+    text-align: center;/* Centra el texto */
+    background: url('/static/images/gym1.jpg') center/cover no-repeat ;/* Fondo con imagen de héroe */
+}
+
+/* ==========================================================
+   🔥 CAPA OSCURA ENCIMA DE LA IMAGEN
+========================================================== */
+.hero-overlay {
+    background: rgba(0, 0, 0, 0.7);/* Capa oscura para mejorar la legibilidad del texto */
+    padding: 40px;/* Padding para dar espacio al contenido del héroe */
+    border-radius: 15px;/* Bordes redondeados para un diseño más suave */
+}
+
+/* ==========================================================
+   🔥 TITULO PRINCIPAL
+========================================================== */
+.hero-title {
+    font-size: 3rem;/* Tamaño grande para el título principal */
+    margin-bottom: 20px;/* Espacio debajo del título */
+    text-shadow: 0 0 20px red;/* Sombra roja para resaltar el título */
+}
+
+/* ==========================================================
+   🔥 SUBTITULO
+========================================================== */
+.hero-subtitle {
+    margin-bottom: 20px;/* Espacio debajo del subtítulo */
+}
+
+/* ==========================================================
+   🔥 BOTON ESTILO NEÓN
+========================================================== */
+.btn-neon {
+    padding: 12px 25px;/* Padding para el botón */
+    background:transparent;/* Fondo transparente para resaltar el efecto neón */
+    color: white;/* Texto blanco para el botón */
+    border: 2px solid red;/* Borde rojo para el efecto neón */
+    border-radius: 10px;/* Bordes redondeados para un diseño más suave */
+    transition: 0.3s;/* Transición suave para el efecto hover */
+    text-decoration: none;/* Elimina el subrayado del enlace */
+}
+
+/* ==========================================================
+   🔥 EFECTO HOVER DEL BOTÓN
+========================================================== */
+.btn-neon:hover {
+    background: red;/* Cambia el fondo a rojo al pasar el ratón */
+    box-shadow: 0 0 20px red;/* Agrega un resplandor rojo al pasar el ratón */
+};
+
+/* ==========================================================
+   🔥 SECCIÓN FEATURES (TARJETAS)
+   ========================================================== */
+
+.features {
+    display: flex; /* Distribución horizontal */
+    justify-content: center; /* Centrado */
+    gap: 30px; /* Separación entre tarjetas */
+    padding: 80px 20px; /* Espaciado */
+    background: #111; /* Fondo gris oscuro */
+}
+
+/* ==========================================================
+   🔥 TARJETA INDIVIDUAL
+   ========================================================== */
+.feature {
+    background: #1a1a1a; /* Fondo ligeramente más claro */
+    padding: 30px; /* Espaciado interno */
+    border-radius: 15px; /* Bordes redondeados */
+    width: 300px; /* Ancho fijo */
+    transition: 0.3s; /* Animación suave */
+}
+
+/* ==========================================================
+   🔥 EFECTO AL PASAR EL RATÓN
+   ========================================================== */
+.feature:hover {
+    transform: translateY(-10px); /* Se eleva */
+    box-shadow: 0 0 20px red; /* Sombra roja */
+}
+
+
+
+/* ==========================================================
+   🔥 FOOTER
+   ========================================================== */
+
+footer {
+    text-align: center; /* Texto centrado */
+    padding: 20px; /* Espaciado */
+    background: black; /* Fondo negro */
+    border-top: 1px solid red; /* Línea roja superior */
+}

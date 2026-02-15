@@ -1,0 +1,28 @@
+services:
+
+  db:
+    image: postgres:15  # Imagen oficial de PostgreSQL
+    container_name: gimnasio_apolo_V_db  # Nombre del contenedor
+    restart: always  # Reinicia automáticamente si se cae
+    environment:
+      POSTGRES_USER: postgres  # Usuario de la base de datos
+      POSTGRES_PASSWORD: postgres  # Contraseña del usuario
+      POSTGRES_DB: gimnasio_apolo_V  # Base de datos que se crea automáticamente
+    ports:
+      - "5432:5432"  # Puerto local:puerto contenedor
+    volumes:
+      - db_data:/var/lib/postgresql/data  # Persistencia de datos
+
+  api:
+    build: .  # Construye la imagen usando el Dockerfile actual
+    container_name: gimnasio_apolo_V_api  # Nombre del contenedor API
+    restart: always
+    depends_on:
+      - db  # Espera a que el contenedor db esté creado antes de arrancar
+    ports:
+      - "8000:8000"  # Exponemos FastAPI
+    volumes:
+      - .:/code  # Sincroniza el código con el contenedor (modo desarrollo)
+
+volumes:
+  db_data:  # Volumen para guardar los datos de PostgreSQL
